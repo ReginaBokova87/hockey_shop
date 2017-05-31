@@ -61,6 +61,7 @@ if (isset($_SESSION['basketcounter'])==false)
 	}
 	else
 	{
+		$is_item_added = array();
 		echo '<form action="addtobasket.php">
 		';
 		for ($j=0; $j<$_SESSION['basketcounter']; $j++)
