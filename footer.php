@@ -6,7 +6,7 @@ if(empty($_COOKIE['session_key'])){
 	setcookie('session_key', $count2);
 	file_put_contents('files/counter2.txt',$count2);
 	}	
-	echo '<p><b>Число посетителей: ".$_COOKIE['session_key']."<br>';
+	echo '<p><b>Число посетителей: '.$_COOKIE['session_key'].'<br>';
 
 		$handle = file_get_contents('files/counter.txt');
 		$handle++;
