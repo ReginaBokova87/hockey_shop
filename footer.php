@@ -11,7 +11,7 @@ if(empty($_COOKIE['session_key'])){
 <?php
 		$handle = file_get_contents('files/counter.txt');
 		$handle++;
-		file_put_contents('files/counter2.txt',$handle);
+		file_put_contents('files/counter.txt',$handle);
 		echo "<p><b> Число посещений: $handle";
 	?>
           
