@@ -1,10 +1,4 @@
 <?php session_start();
-if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
-{
-echo header('Location:index.php');
-}
-else
-{
 for ($i=0; $i<$_SESSION['basketcounter']; $i++)
 {
 	$itemnumber=$_GET['item'.$i];
@@ -24,5 +18,4 @@ for ($i=$itemnumber; $i<$_SESSION['basketcounter']; $i++)
 }
 $_SESSION['basketcounter']--;
 echo '<script>location.href="', $_SERVER['HTTP_REFERER'], '"</script>';
-}
 ?>

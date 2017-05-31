@@ -1,5 +1,5 @@
 <?session_start();
-if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
+if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
 {
 file_put_contents('files/orderslogins.txt', '');
 file_put_contents('files/ordersfullnames.txt', '');

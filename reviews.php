@@ -19,7 +19,7 @@ if (isset($_SESSION['basketcounter'])==false)
 
 <body> 
     <div id="page_wrap">
-        <?include '/header.php';?>
+        <?require '/header.php';?>
         <div id="page">
             <div id="content">
 			<h2 class="post_ttl">Отзывы</h2>
@@ -51,7 +51,7 @@ if (isset($_SESSION['basketcounter'])==false)
 			</div>
             </div>
         </div>
-        <?include '/footer.php';?>
+        <?require '/footer.php';?>
 </div>		
 </body>
 

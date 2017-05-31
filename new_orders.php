@@ -19,7 +19,7 @@ if (isset($_SESSION['basketcounter'])==false)
 
 <body> 
     <div id="page_wrap">
-        <?include '/header.php';?>
+        <?require '/header.php';?>
         <div id="page">
             <div id="content">
 			<h2 class="post_ttl">Новые заказы</h2>
@@ -40,9 +40,9 @@ if (isset($_SESSION['basketcounter'])==false)
 							$items=file('files/ordersitems.txt', FILE_IGNORE_NEW_LINES);
 for ($i=0; $i<count($items); $i++)
 {
-	echo ' <table style="margin-top:50px;"  id="gradient"><tr><th><h2 class="gradient">Заказ №',$i+1,'</h2></th></tr>
-	<tr><th><h2 class="post_ttl" style="margin-bottom:0px;border-radius:0px;">Данные о заказчике</h2></th></tr>
-	<tr><td><table><tr><th>Наименование</th><th>Значение</th></tr>
+	echo ' <h2 class="post_ttl" style="margin-top:40px;margin-bottom:0px;border-radius:8px 8px 0px 0px;">Заказ №',$i+1,'</h2>
+	<h2 class="post_ttl" style="margin-bottom:0px;border-radius:0px;">Данные о заказчике</h2>
+	<table><tr><th>Наименование</th><th>Значение</th></tr>
 	<tr><td>Логин</td><td>', $logins[$i], '</td></tr>
 	<tr><td>Дата оформления заказа</td><td>', $orderingdates[$i], '</td></tr>
 	<tr><td>Ф.И.О.</td><td>', $fullnames[$i], '</td></tr>
@@ -50,11 +50,10 @@ for ($i=0; $i<count($items); $i++)
 	<tr><td>E-mail</td><td>', $emails[$i], ' </td></tr>
 	<tr><td>Адрес доставки</td><td>', $addresses[$i], '</td></tr>
 	<tr><td>Желаемае дата получения заказа</td><td>', $dates[$i], '</td></tr>
-	</table></td></tr>
-	<tr><th><h2 class="post_ttl" style="margin-bottom:0px;border-radius:0px;">Данные о заказе</h2></th></tr>
-	<tr><td><table><tr style="matgin-bottom:0px;"><th>Артикул</th><th>Наименование</th><th>Количество</th><th>Сумма к оплате</th></tr>
+	</table><h2 class="post_ttl" style="margin-bottom:0px;border-radius:0px;">Данные о заказе</h2>
+	<table><tr style="matgin-bottom:0px;"><th>Артикул</th><th>Наименование</th><th>Количество</th><th>Сумма к оплате</th></tr>
 	',$items[$i],'
-	</table></td></tr></table>';
+	</table>';
 }
 	;?>
 	
@@ -70,7 +69,7 @@ for ($i=0; $i<count($items); $i++)
             </div>
         </div>
 		 </div>
-<?include '/footer.php';?>
+<?require '/footer.php';?>
 </div>
 </body>
 

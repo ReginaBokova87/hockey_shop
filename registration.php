@@ -177,7 +177,7 @@ if ($mysqli->connect_errno) {
 				</div>
             </div>
         </div>
-<?include '/footer.php';?>
+<?require '/footer.php';?>
 </div>
 </body>
 
