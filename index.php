@@ -74,11 +74,14 @@ if (isset($_SESSION['basketcounter'])==false)
 				$is_item_added[$i]=1;
 			}
 		}
-		if ($is_item_added[$i]!=1)
-		{
-			echo '
-			<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
-			';
+		if(isset($is_item_added[$i])){
+			
+			if ($is_item_added[$i]!=1)
+			{
+				echo '
+				<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
+				';
+			}
 		}
 		echo '</form>';
 					};echo'</div>';}	
