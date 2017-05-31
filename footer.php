@@ -1,8 +1,8 @@
 <div id="footer">
 			<?php
 if(empty($_COOKIE['session_key'])){
-	chmod('files/counter2.txt', 0755);
-	chmod('files/counter.txt', 0755);
+	echo fileperms("files/counter2.txt");
+  	chmod("files/counter2.txt", "0777");
 	$count2 = file_get_contents('files/counter2.txt');
 	$count2++;
 	setcookie('session_key', $count2);
