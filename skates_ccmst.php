@@ -19,7 +19,7 @@ if (isset($_SESSION['basketcounter'])==false)
 
 <body> 
     <div id="page_wrap">
-        <?require '/header.php';?>
+        <? require 'header.php';?>
         <div id="page">
             <div id="content">
 				<div id="catalog">
@@ -41,7 +41,7 @@ if (isset($_SESSION['basketcounter'])==false)
 				</div>
             </div>
         </div>
-        <?require '/footer.php';?>
+        <? require 'footer.php';?>
 </div>		
 </body>
 

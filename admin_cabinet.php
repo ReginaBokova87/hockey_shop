@@ -19,7 +19,7 @@ if (isset($_SESSION['basketcounter'])==false)
 
 <body> 
     <div id="page_wrap">
-        <?require '/header.php';?>
+        <? require 'header.php';?>
         <div id="page">
             <div id="content">
 			<h2 class="post_ttl">Кабинет администратора</h2>
@@ -98,7 +98,7 @@ if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode']))
 				</div>
             </div>
         </div>
-<?require '/footer.php';?>
+<? require 'footer.php';?>
 </div>
 </body>
 
