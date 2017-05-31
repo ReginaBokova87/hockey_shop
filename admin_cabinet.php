@@ -27,16 +27,22 @@ if (isset($_SESSION['basketcounter'])==false)
 				<div id="catalog">
 					
 					
-					<? 
-					
-$db = mysql_connect ("localhost","root","") or die(mysql_error());
-    mysql_select_db ("shop",$db);
+					<?
+        $dbconfig = require('db_params.php');
+$mysqli = new mysqli($dbconfig['host'], $dbconfig['user'], $dbconfig['password'], $dbconfig['db']);
+if ($mysqli->connect_errno) {
+    echo "Ошибка: Не удалсь создать соединение с базой MySQL и вот почему: \n";
+    echo "Номер_ошибки: " . $mysqli->connect_errno . "\n";
+    echo "Ошибка: " . $mysqli->connect_error . "\n";
+    exit;
+}
 
 if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
 					{
 					$id = $_SESSION['USER']['ID'];
-				 $res = mysql_query("SELECT * FROM users WHERE `id` = '$id'");
-    while($user = mysql_fetch_array($res)){
+				 $query = "SELECT * FROM users WHERE `id` = '$id'";
+				 $result = $mysqli->query($query);
+    while($user=$result->fetch_assoc()){
         if(isset($user['id'])){
 				$login = $user['login'];
 				$FIO = $user['FIO'];

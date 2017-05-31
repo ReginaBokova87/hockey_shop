@@ -24,11 +24,17 @@ if (isset($_SESSION['basketcounter'])==false)
 		
 
         <div id="reg">
-<?php 
-$db = mysql_connect ("localhost","root","") or die(mysql_error());
-    mysql_select_db ("shop",$db);
-
+<?php
+$dbconfig = require('db_params.php');
+$mysqli = new mysqli($dbconfig['host'], $dbconfig['user'], $dbconfig['password'], $dbconfig['db']);
+if ($mysqli->connect_errno) {
+    echo "Ошибка: Не удалсь создать соединение с базой MySQL и вот почему: \n";
+    echo "Номер_ошибки: " . $mysqli->connect_errno . "\n";
+    echo "Ошибка: " . $mysqli->connect_error . "\n";
+    exit;
+}
 ?>
+
 <?
  if(isset($_POST['submit'])){
      $login = $_POST['login'];
@@ -37,17 +43,18 @@ $db = mysql_connect ("localhost","root","") or die(mysql_error());
      $email = $_POST['email'];
      $city = $_POST['city'];
      $registration = true;
-     $res = mysql_query("SELECT * FROM users WHERE `login` = '$login'");
-    while($user = mysql_fetch_array($res)){
+     $query = "SELECT * FROM users WHERE `login` = '$login'";
+	 $result = $mysqli->query($query);
+    while($user=$result->fetch_assoc()){
         if(isset($user['id'])){
             $registration = false;
         }
     }
     if($registration !== false){
 		
-        $query  = mysql_query("INSERT INTO users (`login`, `password`, `FIO`, `email`, `city`) VALUES ('$login', '$password', '$FIO', '$email', '$city')");
-		
-        if($query) {
+        $query  = "INSERT INTO users (`login`, `password`, `FIO`, `email`, `city`) VALUES ('$login', '$password', '$FIO', '$email', '$city')";
+		$result = $mysqli->query($query);
+        if($result) {
             echo "Вы зарегистрированны как $login";
             echo '<a href="index.php"> | Авторизация</a>';
         }
