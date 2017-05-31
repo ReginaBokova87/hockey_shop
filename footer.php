@@ -1,17 +1,11 @@
 <div id="footer">
 			<?php
 if(empty($_COOKIE['session_key'])){
-	$text = "Какой-то текст";
- 
-		// открываем файл, если файл не существует,
-		//делается попытка создать его
+		$text = "Какой-то текст";
 		$fp = fopen("files/file.txt", "w");
-
-		// записываем в файл текст
 		fwrite($fp, $text);
-
-		// закрываем
 		fclose($fp);
+	
 	$count2 = file_get_contents('files/counter2.txt');
 	$count2++;
 	setcookie('session_key', $count2);
