@@ -1,4 +1,5 @@
-<?php $names=htmlspecialchars($_POST['name']);
+<?php 
+$names=htmlspecialchars($_POST['name']);
 $reviews=htmlspecialchars($_POST['review']);
 $reviews_dates=date("d.m.y");
 $reviews_times=date("H:i:s");
