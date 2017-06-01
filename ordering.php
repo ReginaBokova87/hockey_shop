@@ -27,7 +27,7 @@ if (isset($_SESSION['basketcounter'])==false)
 					<div id="basket">
 					<?if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
 					{
-					echo '<p style="font-size:24px;padding-left:20px;margin-top:150px;" align="center"><b>Эта страница не доступна для просмотра администраторами!</b></p>';
+					 header('Location:index.php');
 					}
 					else
 					{
