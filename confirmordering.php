@@ -5,6 +5,7 @@ echo header('Location:index.php');
 }
 else
 {
+$sum=0;
 for ($i=0; $i<$_SESSION['basketcounter']; $i++)
 {
 	$sum=$sum+$_SESSION['price'.$i]*$_SESSION['quantity'.$i];
