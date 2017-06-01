@@ -2,7 +2,6 @@
 $itemnumber='';
 for ($i=0; $i<$_SESSION['basketcounter']; $i++)
 {
-	{ 
 if(!empty($_GET['product'.$i])){ 
 	$itemnumber=$_GET['product'.$i]; 
 if ($itemnumber!='') 
