@@ -61,11 +61,11 @@ if (isset($_SESSION['basketcounter'])==false)
 	}
 	else
 	{
-		$is_item_added = true;
+		
 		echo '<form action="addtobasket.php">
 		';
 		
-		if ($is_item_added==true)
+		if ($is_item_added[$i]!=1)
 			{
 				echo '
 				<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
@@ -78,7 +78,7 @@ if (isset($_SESSION['basketcounter'])==false)
 				echo '
 				<center><input type="submit" value="Добавлено в корзину" name="product', $i, '" disabled></center>
 				';
-				$is_item_added==false;
+				$is_item_added[$i]=1;
 			}
 		}
 		
