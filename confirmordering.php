@@ -18,7 +18,7 @@ $phonenumber=htmlspecialchars($_GET['phonenumber']);
 $email=htmlspecialchars($_GET['email']);
 $address=htmlspecialchars($_GET['address']);
 $date=htmlspecialchars($_GET['date']);
-date_default_timezone_set('Etc/GMT-6');
+date_default_timezone_set('Etc/GMT+7');
 $orderingdate=date("d.m.y H:i");
 file_put_contents('files/orderslogins.txt', $login."\n", FILE_APPEND);
 file_put_contents('files/ordersfullnames.txt', $fullname."\n", FILE_APPEND);
