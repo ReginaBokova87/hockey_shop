@@ -76,7 +76,6 @@ if (isset($_SESSION['basketcounter'])==false)
 				$is_item_added[$i]=1;
 			}
 		}
-		
 		if ($is_item_added[$i]!=1)
 			{
 				echo '
