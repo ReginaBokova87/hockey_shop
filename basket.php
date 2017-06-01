@@ -27,14 +27,11 @@ if (isset($_SESSION['basketcounter'])==false)
 					<div id="basket">
 					<?php 
 						$sum=0;
+						echo '<table>
+	<tr><th>Артикул</th><th>Наименование</th><th>Цена</th><th>Количество</th><th>Сумма</th><th></th></tr>';
 						for ($i=0; $i<$_SESSION['basketcounter']; $i++)
 {
-	
 	echo '
-	<table>
-	<tr><th>Артикул</th><th>Наименование</th><th>Цена</th><th>Количество</th><th>Сумма</th><th rowspan="2"><form action="delfrombasket.php">
-	<input type="submit" value="Удалить из корзины" name="item', $i, '">
-	</form></th></tr>
 	<tr>
 	<td id="basket_article">
 	<b>', $_SESSION['item'.$i], '</b>
@@ -51,15 +48,19 @@ if (isset($_SESSION['basketcounter'])==false)
 	<input type="submit" value="+" name="changequantity', $i, '">
 	</form>
 	</td>
-	<td id="sum">
+	<td id="basket_sum">
 	<p align="right">', $_SESSION['price'.$i]*$_SESSION['quantity'.$i], ' руб.</b></p>
 	</td>
-	
+	<td id="basket_quantity">
+	<form action="delfrombasket.php">
+	<input type="submit" value="Удалить из корзины" name="item', $i, '">
+	</form>
+	</td>
 	</tr>
-	</table>
 	';
 	$sum=$sum+$_SESSION['price'.$i]*$_SESSION['quantity'.$i];
 }
+						</table>
 if ($_SESSION['basketcounter']==0)
 {
 	echo '
