@@ -25,7 +25,12 @@ if (isset($_SESSION['basketcounter'])==false)
 			<h2 class="post_ttl">Корзина товаров</h2>
 				<div id="catalog">
 					<div id="basket">
-					<?php 
+					<?if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
+					{
+					 header('Location:index.php');
+					}
+					else
+					{ 
 						$sum=0;
 						echo '<table>
 	<tr><th>Артикул</th><th>Наименование</th><th>Цена</th><th>Количество</th><th>Сумма</th><th></th></tr>';
