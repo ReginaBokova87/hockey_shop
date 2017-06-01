@@ -13,7 +13,7 @@ if ($mysqli->connect_errno) {
         if(isset($_POST['submit'])) {
             $login = $_POST['login'];
             $password = md5($_POST['password']);
-            $query = "SELECT * FROM users WHERE `login` = "' . $mysqli->real_escape_string($login). '" AND `password` = "' . $mysqli->real_escape_string($password). '" ";
+            $query = "SELECT * FROM users WHERE `login` = ' . $mysqli->real_escape_string($login). ' AND `password` = ' . $mysqli->real_escape_string($password). ' ";
                 $result = $mysqli->query($query);
 				while($user=$result->fetch_assoc()){
                     if($user){
