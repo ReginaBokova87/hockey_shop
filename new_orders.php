@@ -19,7 +19,7 @@ if (isset($_SESSION['basketcounter'])==false)
 
 <body> 
     <div id="page_wrap">
-        <?include '/header.php';?>
+        <? require 'header.php';?>
         <div id="page">
             <div id="content">
 			<h2 class="post_ttl">Новые заказы</h2>
@@ -70,7 +70,7 @@ for ($i=0; $i<count($items); $i++)
             </div>
         </div>
 		 </div>
-<?include '/footer.php';?>
+<? require 'footer.php';?>
 </div>
 </body>
 
