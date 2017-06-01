@@ -60,7 +60,7 @@ if (isset($_SESSION['basketcounter'])==false)
 	';
 	$sum=$sum+$_SESSION['price'.$i]*$_SESSION['quantity'.$i];
 }
-						</table>
+						echo '</table>';
 if ($_SESSION['basketcounter']==0)
 {
 	echo '
