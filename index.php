@@ -65,6 +65,12 @@ if (isset($_SESSION['basketcounter'])==false)
 		echo '<form action="addtobasket.php">
 		';
 		
+		if ($is_item_added==true)
+			{
+				echo '
+				<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
+				';
+			}
 		for ($j=0; $j<$_SESSION['basketcounter']; $j++)
 		{
 			if ($_SESSION['item'.$j]==$productarticles[$i])
@@ -75,13 +81,7 @@ if (isset($_SESSION['basketcounter'])==false)
 				$is_item_added==false;
 			}
 		}
-			
-		if ($is_item_added==true)
-			{
-				echo '
-				<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
-				';
-			}
+		
 		echo '</form>';
 					};echo'</div>';}	
 					
