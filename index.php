@@ -76,7 +76,7 @@ if (isset($_SESSION['basketcounter'])==false)
 			}
 		}
 			
-		if ($is_item_added!=false)
+		if ($is_item_added==true)
 			{
 				echo '
 				<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
