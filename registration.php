@@ -37,13 +37,13 @@ if ($mysqli->connect_errno) {
 
 <?
  if(isset($_POST['submit'])){
-     $login = $_POST['login'];
+     $login = $mysqli->real_escape_string($_POST['login']);
      $password = md5($_POST['password']);
-     $FIO = $_POST['FIO'];
-     $email = $_POST['email'];
-     $city = $_POST['city'];
+     $FIO = $mysqli->real_escape_string($_POST['FIO']);
+     $email = $mysqli->real_escape_string($_POST['email']);
+     $city = $mysqli->real_escape_string($_POST['city']);
      $registration = true;
-     $query = "SELECT * FROM users WHERE `login` = '$login';
+     $query = "SELECT * FROM users WHERE `login` = '.$login.';
 	 $result = $mysqli->query($query);
     while($user=$result->fetch_assoc()){
         if(isset($user['id'])){
@@ -52,7 +52,7 @@ if ($mysqli->connect_errno) {
     }
     if($registration !== false){
 		
-        $query  = "INSERT INTO users (`login`, `password`, `FIO`, `email`, `city`) VALUES ('$login', '$password', '$FIO', '$email', '$city')";
+        $query  = "INSERT INTO users (`login`, `password`, `FIO`, `email`, `city`) VALUES ('.$login.', '.$password.', '.$FIO.', '.$email.', '.$city.')";
 		$result = $mysqli->query($query);
         if($result) {
             echo "Вы зарегистрированны как $login";
