@@ -1,11 +1,15 @@
-<? session_start();
-if (isset($_SESSION['basketcounter'])==false)
-{
-	$_SESSION['basketcounter']=0;
+<?
+session_start();
+if (isset($_SESSION['basketcounter']) == false) {
+    $_SESSION['basketcounter'] = 0;
 }
 ?>
-<?php ini_set("memory_limit", "32M"); ?>
-<?php header("Content-Type: text/html; charset=utf-8");?>
+<?php
+ini_set("memory_limit", "32M");
+?>
+<?php
+header("Content-Type: text/html; charset=utf-8");
+?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -19,42 +23,41 @@ if (isset($_SESSION['basketcounter'])==false)
 
 <body> 
     <div id="page_wrap">
-        <? require 'header.php';?>
+        <?
+require 'header.php';
+?>
         <div id="page">
             <div id="content">
 			<h2 class="post_ttl">Корзина товаров</h2>
 				<div id="catalog">
 					<div id="basket">
-					<?if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
-					{
-					 header('Location:index.php');
-					}
-					else
-					{ 
-						$sum=0;
-						echo '<table>
+					<?
+if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) {
+    header('Location:index.php');
+} else {
+    $sum = 0;
+    echo '<table>
 	<tr><th>Артикул</th><th>Наименование</th><th>Цена</th><th>Количество</th><th>Сумма</th><th></th></tr>';
-						for ($i=0; $i<$_SESSION['basketcounter']; $i++)
-{
-	echo '
+    for ($i = 0; $i < $_SESSION['basketcounter']; $i++) {
+        echo '
 	<tr>
 	<td id="basket_article">
-	<b>', $_SESSION['item'.$i], '</b>
+	<b>', $_SESSION['item' . $i], '</b>
 	</td>
 	<td id="basket_item_name">
-	<b>', $_SESSION['item_name'.$i], '</b>
+	<b>', $_SESSION['item_name' . $i], '</b>
 	</td>
-	<td id="basket_price">', $_SESSION['price'.$i], ' руб.
+	<td id="basket_price">', $_SESSION['price' . $i], ' руб.
 	</td>
 	<td id="basket_quantity">
 	<form action="changequantity.php">
 	<input type="submit" value="-" name="changequantity', $i, '">
-	 ', $_SESSION['quantity'.$i], ' 
+	 ', $_SESSION['quantity' . $i], ' 
 	<input type="submit" value="+" name="changequantity', $i, '">
 	</form>
 	</td>
 	<td id="basket_sum">
-	<p align="right">', $_SESSION['price'.$i]*$_SESSION['quantity'.$i], ' руб.</b></p>
+	<p align="right">', $_SESSION['price' . $i] * $_SESSION['quantity' . $i], ' руб.</b></p>
 	</td>
 	<td id="basket_quantity">
 	<form action="delfrombasket.php">
@@ -63,12 +66,11 @@ if (isset($_SESSION['basketcounter'])==false)
 	</td>
 	</tr>
 	';
-	$sum=$sum+$_SESSION['price'.$i]*$_SESSION['quantity'.$i];
-}
-						echo '</table>';
-if ($_SESSION['basketcounter']==0)
-{
-	echo '
+        $sum = $sum + $_SESSION['price' . $i] * $_SESSION['quantity' . $i];
+    }
+    echo '</table>';
+    if ($_SESSION['basketcounter'] == 0) {
+        echo '
 	<tr>
 	<td colspan="3">
 	<br>
@@ -78,10 +80,8 @@ if ($_SESSION['basketcounter']==0)
 	</td>
 	</tr>
 	';
-}
-else
-{
-	echo '
+    } else {
+        echo '
 	</table>
 	<table width="1207" align="center" border="4">
 	<tr>
@@ -95,13 +95,17 @@ else
 	</tr>
 	</table>
 	';
+    }
+    ;
 }
-;}?>
+?>
 				</div>
             </div>
         </div>
 		</div>
-<? require 'footer.php';?>
+<?
+require 'footer.php';
+?>
 </div>
 </body>
 
