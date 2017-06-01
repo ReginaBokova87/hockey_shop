@@ -49,7 +49,7 @@ if (isset($_SESSION['basketcounter'])==false)
 	<td id="basket_quantity">
 	<form action="changequantity.php">
 	<input type="submit" value="-" name="changequantity', $i, '">
-	 ', $_SESSION['quantity'.$i], ' 
+	 ', $_SESSION['quantity'.$i], ' 
 	<input type="submit" value="+" name="changequantity', $i, '">
 	</form>
 	</td>
@@ -96,7 +96,7 @@ else
 	</table>
 	';
 }
-?>
+;}?>
 				</div>
             </div>
         </div>
