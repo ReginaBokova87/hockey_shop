@@ -1,353 +1,347 @@
 a { /* Для ссылок */
-        text-decoration:none;  /* Подчеркивание - отключено */
-        color:#4169e1;  /* Цвет */
-        font-weight: bold;    /* Жирный шрифт */      
-        font-family: arial;  /* Шрифт ариал */
-		cursor:pointer;
+text-decoration:none;  /* Подчеркивание - отключено */
+color:#4169e1;  /* Цвет */
+font-weight: bold;    /* Жирный шрифт */      
+font-family: arial;  /* Шрифт ариал */
+cursor:pointer;
 }
 a:hover {  /* Ссылки: при наведении */
-        color:#1b1b1b;  /* Цвет */
+color:#1b1b1b;  /* Цвет */
 }
 body{  /* Для всей страницы */
-	background: url('images/fon.jpg');  /* Фон страницы */
-	background-repeat:repeat fixed top-y;  /* Повторение фона: повторять фиксировано сверху по у */
-	margin: 0px auto 0px;  /* Выравнивание по центру(автоматические отступы слева и справа) */
+background: url('images/fon.jpg');  /* Фон страницы */
+background-repeat:repeat fixed top-y;  /* Повторение фона: повторять фиксировано сверху по у */
+margin: 0px auto 0px;  /* Выравнивание по центру(автоматические отступы слева и справа) */
 }
 h1, h2, h3, h4, h5, h6 {  /* Все заголовки */
-        color:#505050;  /* Цвет  */
-        text-decoration:none;  /* Подчеркивание - отключено */
-        font-weight: bold;   /* Жирный шрифт  */      
-        font-family: arial;  /* Шрифт ариал */
+color:#505050;  /* Цвет  */
+text-decoration:none;  /* Подчеркивание - отключено */
+font-weight: bold;   /* Жирный шрифт  */      
+font-family: arial;  /* Шрифт ариал */
 }
 h2.post_ttl {  /* Заголовок страницы или товара */
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-        color:#464451;  /* Цвет текста */
-        font-size:18px;  /*  Размер текста*/
-		padding:5px;  /* Внутренний Отступ для текста */
-		border-radius:8px; /* Закругление */
-		margin-top:0px; 
-		height:30px;
-		font-family: Comic Cans;
-		font-size:28px;
-		text-align:center;		
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+color:#464451;  /* Цвет текста */
+font-size:18px;  /*  Размер текста*/
+padding:5px;  /* Внутренний Отступ для текста */
+border-radius:8px; /* Закругление */
+margin-top:0px; 
+height:30px;
+font-family: Comic Cans;
+font-size:28px;
+text-align:center;		
 }
 .gradient{
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-        color:#464451;  /* Цвет текста */
-        font-size:26px;  /*  Размер текста*/
-		padding:10px;  /* Внутренний Отступ для текста */
-		border-radius:0px 0px 8px 8px; /* Закругление */
-		margin-top:0px; 
-		height:30px;
-		font-weight:bold;
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+color:#464451;  /* Цвет текста */
+font-size:26px;  /*  Размер текста*/
+padding:10px;  /* Внутренний Отступ для текста */
+border-radius:0px 0px 8px 8px; /* Закругление */
+margin-top:0px; 
+height:30px;
+font-weight:bold;
 }
 #img_border{
-		border:8px solid #c0c0c0;
+border:8px solid #c0c0c0;
 }
 #page_wrap{  /* Внешний блок */
-        width: 1024px; /* Ширина сайта  */
-        margin: 0px auto 0px;  /* Расположение по центру экрана */
+width: 1024px; /* Ширина сайта  */
+margin: 0px auto 0px;  /* Расположение по центру экрана */
 }
 #page{  /* Основной блок */
-        float:left;  /* Прижат влево */
-		width: 100%;  /* Ширина = 100% от 1024рх */
-		margin-top: 20px;  /* ВНешний отступ сверху */
+float:left;  /* Прижат влево */
+width: 100%;  /* Ширина = 100% от 1024рх */
+margin-top: 20px;  /* ВНешний отступ сверху */
 }
 #content{  /* Контент */
-        border-radius:8px;  /* Закругление блока */
-        font-size:14px;  /* Размер текста */
-		margin-bottom: 50px;  /* Отступ снизу */
-		background: url('images/fon3.jpg');  /* Фон основного блока */
-		background-size: cover;  /* Размер фона: по  размеру изображения  */
-		float:right;  /* Прижат справа */
-		width: 100%;  /* Ширина = 100%(от 1024рх) */
+border-radius:8px;  /* Закругление блока */
+font-size:14px;  /* Размер текста */
+margin-bottom: 50px;  /* Отступ снизу */
+background: url('images/fon3.jpg');  /* Фон основного блока */
+background-size: cover;  /* Размер фона: по  размеру изображения  */
+float:right;  /* Прижат справа */
+width: 100%;  /* Ширина = 100%(от 1024рх) */
 }
 #footer{  /* Подвал */
-		color:#000000;  /* Цвет текста - черный */
-		margin-top: 20px;  /* Отступ сверху = 20рх */
-        border-radius:8px;  /* Закругление блока */
-        background:url('images/fon3.jpg');  /* Фон подвала */
-        height:150px;  /* Высота подвала */
-		float:left;   /* Прижат слева */
-		width: 100%; /* Ширина = 100% от 1024рх */
+color:#000000;  /* Цвет текста - черный */
+margin-top: 20px;  /* Отступ сверху = 20рх */
+border-radius:8px;  /* Закругление блока */
+background:url('images/fon3.jpg');  /* Фон подвала */
+height:150px;  /* Высота подвала */
+float:left;   /* Прижат слева */
+width: 100%; /* Ширина = 100% от 1024рх */
 }
 #footer p{ /* Текст в подвале */
-		text-align:left; /* Выравнивание текста: слева */
-		margin-left: 2em;  /* Отступ слева */
-		margin-bottom: 1em; /* Отступ справа */
+text-align:left; /* Выравнивание текста: слева */
+margin-left: 2em;  /* Отступ слева */
+margin-bottom: 1em; /* Отступ справа */
 }
 #footer a{ /* Ссылки в подвале */
-		color:#000000;
+color:#000000;
 }
 #footer a:hover{ /* Ссылки в подвале: при наведении */
-		color:#4169e1;
+color:#4169e1;
 }
 #catalog{ /* Блок со всеми товарами */
-        margin: 25px 40px; /* Отступы (сверху,снизу; слева,справа) */
-        text-align:center; /* Выравнивание текста по центру */
-        width:95%; /* Ширина = 92% от 1024рх */
-		float:left; /* Прижат слева */
+margin: 25px 40px; /* Отступы (сверху,снизу; слева,справа) */
+text-align:center; /* Выравнивание текста по центру */
+width:95%; /* Ширина = 92% от 1024рх */
+float:left; /* Прижат слева */
 }
 #product{ /* Блок с товаром */
-		border-radius:8px; /* Закругление блока */
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-		float: left; /* Прижат слева */
-		margin: 25px; /* Отступ со всех сторон = 25рх */
-		width: 27%; /* Ширина = 28% от 1024рх  */
+border-radius:8px; /* Закругление блока */
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+float: left; /* Прижат слева */
+margin: 25px; /* Отступ со всех сторон = 25рх */
+width: 27%; /* Ширина = 28% от 1024рх  */
 }
 #product p{ /* Текст в блоке с товаром */
-		font-weight: bold; /* Жирный шрифт */
+font-weight: bold; /* Жирный шрифт */
 }
-
 #product img{ /* Картинка в товаре */
-		border-radius:8px; /* Закругление картинки */
-		border:2px solid #c0c0c0; /* Рамка */
-		margin: 25px 28px; /* Отступы(сверху,снизу;слева,справа) */
-		width:200px; /* Ширина картинки */
-		height:200px; /* Высота картинки */
+border-radius:8px; /* Закругление картинки */
+border:2px solid #c0c0c0; /* Рамка */
+margin: 25px 28px; /* Отступы(сверху,снизу;слева,справа) */
+width:200px; /* Ширина картинки */
+height:200px; /* Высота картинки */
 }
 #addprod{
-		border-radius:8px; /* Закругление блока */
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-		float: left; /* Прижат слева */
-		margin: 25px; /* Отступ со всех сторон = 25рх */
-		width: 90%; /* Ширина = 28% от 1024рх  */
+border-radius:8px; /* Закругление блока */
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+float: left; /* Прижат слева */
+margin: 25px; /* Отступ со всех сторон = 25рх */
+width: 90%; /* Ширина = 28% от 1024рх  */
 }
 #basket{
-		border-radius:8px; /* Закругление блока */
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-		float: left; /* Прижат слева */
-		margin: 25px; /* Отступ со всех сторон = 25рх */
-		width: 95%; /* Ширина = 28% от 1024рх  */
+border-radius:8px; /* Закругление блока */
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+float: left; /* Прижат слева */
+margin: 25px; /* Отступ со всех сторон = 25рх */
+width: 95%; /* Ширина = 28% от 1024рх  */
 }
 #basket table{
-		width:100%;
-		border: 2px solid #5993C5; /* Рамка вокруг таблицы */
-		border-collapse: collapse;
+width:100%;
+border: 2px solid #5993C5; /* Рамка вокруг таблицы */
+border-collapse: collapse;
 }
 #basket th{
-		background:#e6e6fa;
-		text-align: center; /* Выравнивание по левому краю */
-		border: 2px solid #5993C5; /* Граница вокруг ячеек */
-		padding:3px;
+background:#e6e6fa;
+text-align: center; /* Выравнивание по левому краю */
+border: 2px solid #5993C5; /* Граница вокруг ячеек */
+padding:3px;
 }
 #basket td{
-		background:#F0F6F6;
-		text-align: center; /* Выравнивание по левому краю */
-		border: 2px solid #5993C5; /* Граница вокруг ячеек */
-		padding:3px;
+background:#F0F6F6;
+text-align: center; /* Выравнивание по левому краю */
+border: 2px solid #5993C5; /* Граница вокруг ячеек */
+padding:3px;
 }
 #basket_del{
-		width:100px;
-		text-align:center;
+width:100px;
+text-align:center;
 }
 #basket_article{
-		width:100px;
-		text-align:center;
+width:100px;
+text-align:center;
 }
 #basket_item_name{
-		width:300px;
-		text-align:center;
+width:300px;
+text-align:center;
 }
 #basket_price{
-		width:100px;
-		text-align:center;
+width:100px;
+text-align:center;
 }
 #basket_sum{
-		width:100px;
-		text-align:center;
+width:100px;
+text-align:center;
 }
 #basket_quantity{
-		width:150px;
-		text-align:center;
+width:150px;
+text-align:center;
 }
 #description{ /* Описание товара */
-		border-radius:8px; /* Закругление блока */
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-		float: left; /* Прижат слева */
-		margin: 25px; /* Отступы со всех сторон */
-		width: 60%; /* Ширина = 60% от 1024рх */
-		height: 315px; /* Высота блока */
+border-radius:8px; /* Закругление блока */
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+float: left; /* Прижат слева */
+margin: 25px; /* Отступы со всех сторон */
+width: 60%; /* Ширина = 60% от 1024рх */
+height: 315px; /* Высота блока */
 }
 #description p{ /* Текст в описании */
-		margin: 20px; /* Отступы со всех сторон */
-		text-align:justify; /* Выравнивание текста - по ширине */
+margin: 20px; /* Отступы со всех сторон */
+text-align:justify; /* Выравнивание текста - по ширине */
 }
 #reg { /* Строка с регистрацией */
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-        width:1024px; /* Ширина  */
-		height: 35px; /* Высота*/
-        padding: 0; /* Отступы внутри */
-        margin: 0; /* Отступы снаружи */
-        font-size: 100%; /* Размер шрифта = 100%(от изначально заданного) */
-        font-family: Georgia; /* Шрифт */
-        }
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+width:1024px; /* Ширина  */
+height: 35px; /* Высота*/
+padding: 0; /* Отступы внутри */
+margin: 0; /* Отступы снаружи */
+font-size: 100%; /* Размер шрифта = 100%(от изначально заданного) */
+font-family: Georgia; /* Шрифт */
+}
 #daynews { /* Строка с регистрацией */
-		background: #4794ff; /* Old browsers */
-		background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
-		background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
-        width:1024px; /* Ширина  */
-		height: 35px; /* Высота*/
-        padding: 0; /* Отступы внутри */
-        margin: 0; /* Отступы снаружи */
-        font-size: 18px; /* Размер шрифта = 100%(от изначально заданного) */
-        font-family: Georgia; /* Шрифт */
-		text-align:center; 
-		font-weight: bold;
-		color: #fff;
-		padding-top:5px;
+background: #4794ff; /* Old browsers */
+background: -moz-linear-gradient(top,  #4794ff 0%, #a8d8ff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4794ff), color-stop(100%,#a8d8ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4794ff 0%,#a8d8ff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4794ff 0%,#a8d8ff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4794ff', endColorstr='#a8d8ff',GradientType=0 ); /* IE6-9 */
+width:1024px; /* Ширина  */
+height: 35px; /* Высота*/
+padding: 0; /* Отступы внутри */
+margin: 0; /* Отступы снаружи */
+font-size: 18px; /* Размер шрифта = 100%(от изначально заданного) */
+font-family: Georgia; /* Шрифт */
+text-align:center; 
+font-weight: bold;
+color: #fff;
+padding-top:5px;
 }
 #banner { 
-        width:450px; /* Ширина  */
-		height: 100px; /* Высота*/
-        padding: 0; /* Отступы внутри */
-        margin: 0px auto; /* Отступы снаружи */
-       
+width:450px; /* Ширина  */
+height: 100px; /* Высота*/
+padding: 0; /* Отступы внутри */
+margin: 0px auto; /* Отступы снаружи */
 }
 #menu { /* Выпадающее меню */
-        width:1024px; /* Ширина меню */
-		height: 35px; /* Высота меню */
-        padding:5; /* Отступы внутри */
-        margin: -5; /* Отступы снаружи */
-        font-family: Comic Cans;
-		font-size:24px;
-        }
+width:1024px; /* Ширина меню */
+height: 35px; /* Высота меню */
+padding:5; /* Отступы внутри */
+margin: -5; /* Отступы снаружи */
+font-family: Comic Cans;
+font-size:24px;
+}
 #menu li {
-    background: url('images/menu.png');
-    margin-bottom: 15px;
-    list-style: none;
-    float: left;
-    padding: 0;
-    margin: 0;
-    width: 204.8px;
-    text-align: center;
-    position: relative;
-    padding-top: 10px;
+background: url('images/menu.png');
+margin-bottom: 15px;
+list-style: none;
+float: left;
+padding: 0;
+margin: 0;
+width: 204.8px;
+text-align: center;
+position: relative;
+padding-top: 10px;
 }
 #menu li:hover{
-    background: url('images/menu2.png');
+background: url('images/menu2.png');
 }
 #menu li a { /* Ссылки в пункте меню */
-        display: block;
-        width: 204.8px; 
-        height: 35px;
-        color: #fff;
-		font-family: Comic Cans;
-		font-size:24px;
-        text-decoration: none;
-        }
-
+display: block;
+width: 204.8px; 
+height: 35px;
+color: #fff;
+font-family: Comic Cans;
+font-size:24px;
+text-decoration: none;
+}
 br.both{
-  clear:both;
+clear:both;
 }
 #backgroundPopup{
-  display:none;
-  position:fixed;
-  _position:absolute; /* hack for internet explorer 6 */
-  height:100%;
-  width:100%;
-  top:0;
-  left:0;
-  background:#000000;
-  border:1px solid #cecece;
-  z-index:1;
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6 */
+height:100%;
+width:100%;
+top:0;
+left:0;
+background:#000000;
+border:1px solid #cecece;
+z-index:1;
 }
 #popupContact{
-  display:none;
-  position: fixed;
-  top:100px;
-  _position:absolute; /* hack for internet explorer 6 */
-  height:250px;
-  width:200px;
-  background:#FFFFFF;
-  border:2px solid #cecece;
-  z-index:2;
-  padding:12px;
-  font-size:18px;
-  border-radius: 8px
+display:none;
+position: fixed;
+top:100px;
+_position:absolute; /* hack for internet explorer 6 */
+height:250px;
+width:200px;
+background:#FFFFFF;
+border:2px solid #cecece;
+z-index:2;
+padding:12px;
+font-size:18px;
+border-radius: 8px
 }
 #popupContactClose {
-  font-size:14px;
-  line-height:14px;
-  right:6px;
-  top:4px;
-  position:absolute;
-  color:#6fa5fd;
-  font-weight:bold;
-  display:block;
+font-size:14px;
+line-height:14px;
+right:6px;
+top:4px;
+position:absolute;
+color:#6fa5fd;
+font-weight:bold;
+display:block;
 }
 #button{
-  text-align:center;
-  margin:20px;
+text-align:center;
+margin:20px;
 }	
 #reg{
 color:#fff;
 font-weight:bold;
 }
-
 #reg a{
 cursor:pointer;
 color:#fff;
 }
-
 #reg input{
-	margin:1%;
+margin:1%;
 }
 #popupContact input{
 margin:2% auto;	
-
 }
