@@ -12,9 +12,9 @@ if ($mysqli->connect_errno) {
 }
         if(isset($_POST['submit'])) {
 		
-            $login = $_POST['login'];
+            $login = $mysqli->real_escape_string($_POST['login']);
             $password = md5($_POST['password']);
-            $query = "SELECT * FROM users WHERE `login` = '$login' AND `password` = '$password' ";
+            $query = "SELECT * FROM users WHERE `login` = '.$login.' AND `password` = '$password' ";
                 $result = $mysqli->query($query);
 				while($user=$result->fetch_assoc()){
                     if($user){
