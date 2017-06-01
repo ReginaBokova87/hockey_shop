@@ -25,7 +25,9 @@ if (isset($_SESSION['basketcounter'])==false)
 			<h2 class="post_ttl">Корзина товаров</h2>
 				<div id="catalog">
 					<div id="basket">
-					<?php for ($i=0; $i<$_SESSION['basketcounter']; $i++)
+					<?php 
+						$sum=0;
+						for ($i=0; $i<$_SESSION['basketcounter']; $i++)
 {
 	
 	echo '
