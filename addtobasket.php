@@ -9,14 +9,18 @@ $productarticles=file('files/top_productarticles.txt', FILE_IGNORE_NEW_LINES);
 $productnames=file('files/top_productnames.txt', FILE_IGNORE_NEW_LINES);
 $productprices=file('files/top_productprices.txt', FILE_IGNORE_NEW_LINES);
 $productnumber='';
-for ($i=0; $i<count($productarticles); $i++)
-{
-	$productnumber=$_GET['product'.$i];
-	if ($productnumber!='')
-	{
-		$productnumber=$i;
-		break;
-	}
+for ($i=0; $i<count($productarticles); $i++) 
+{ 
+if(!empty($_GET['product'.$i])){ 
+	$productnumber=$_GET['product'.$i]; 
+if ($productnumber!='') 
+{ 
+$productnumber=$i; 
+break; 
+} 
+} else { 
+continue; 
+} 
 }
 $_SESSION['item'.$_SESSION['basketcounter']]=$productarticles[$productnumber];
 $_SESSION['item_name'.$_SESSION['basketcounter']]=$productnames[$productnumber];
