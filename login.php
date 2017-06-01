@@ -11,6 +11,7 @@ if ($mysqli->connect_errno) {
     exit;
 }
         if(isset($_POST['submit'])) {
+		
             $login =  ' . $mysqli->real_escape_string($_POST['login']) . '
             $password = ' . $mysqli->real_escape_string($_POST['password']) . ';
             $query = "SELECT * FROM users WHERE `login` = '$login' AND `password` = '$password' ";
