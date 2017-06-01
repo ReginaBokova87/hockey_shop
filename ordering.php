@@ -33,6 +33,7 @@ if (isset($_SESSION['basketcounter'])==false)
 					{
 					echo'<h2 class="post_ttl" style="margin-bottom:-25px;">Товары</h2><table>
 	<tr><th>Артикул</th><th>Наименование</th><th>Цена</th><th>Количество</th><th>Сумма к оплате</th></tr>';
+	$sum=0;					
 for ($i=0; $i<$_SESSION['basketcounter']; $i++)
 {
 	$sum=$sum+$_SESSION['price'.$i]*$_SESSION['quantity'.$i];
