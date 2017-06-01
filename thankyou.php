@@ -25,11 +25,17 @@ if (isset($_SESSION['basketcounter'])==false)
 			<h2 class="post_ttl">Оформление заказа</h2>
 				<div id="catalog">
 					<div id="basket" style="font-size:18px;">
-						<b>Спасибо за заказ!</b>
+						<?if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
+					{
+					 header('Location:index.php');
+					}
+					else
+					{
+						echo' <p><b>Спасибо за заказ!</b>
 </p>
 Мы свяжемся с вами в ближайшее время для окончательного подтверждения заказа.
 <br>
-<p align="center"><a href="index.php">На главную</a></p>
+<p align="center"><a href="index.php">На главную</a></p>';}?>
 					</div>
             </div>
         </div>
