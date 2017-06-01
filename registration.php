@@ -43,7 +43,7 @@ if ($mysqli->connect_errno) {
      $email = $_POST['email'];
      $city = $_POST['city'];
      $registration = true;
-     $query = "SELECT * FROM users WHERE `login` = $mysqli->real_escape_string('$login')";
+     $query = "SELECT * FROM users WHERE `login` = "' . $mysqli->real_escape_string($login). '";
 	 $result = $mysqli->query($query);
     while($user=$result->fetch_assoc()){
         if(isset($user['id'])){
