@@ -6,14 +6,19 @@ $productnames=file('files/top_productnames.txt', FILE_IGNORE_NEW_LINES);
 $productprices=file('files/top_productprices.txt', FILE_IGNORE_NEW_LINES);
 $productimgs=file('files/top_productimgs.txt', FILE_IGNORE_NEW_LINES);
 $productsrcs=file('files/top_productsrcs.txt', FILE_IGNORE_NEW_LINES);
+$productnumber='';
 for ($i=0; $i<count($productarticles); $i++)
 {
-	$productnumber=$_GET['product'.$i];
-	if ($productnumber!='')
-	{
-		$productnumber=$i;
-		break;
-	}
+if(!empty($_GET['product'.$i])){ 
+	$productnumber=$_GET['product'.$i]; 
+if ($productnumber!='') 
+{ 
+$productnumber=$i; 
+break; 
+} 
+} else { 
+continue; 
+} 
 }
 file_put_contents('files/top_productarticles.txt', '');
 file_put_contents('files/top_productnames.txt', '');
