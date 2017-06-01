@@ -6,7 +6,7 @@ if(!empty($_GET['product'.$i])){
 	$itemnumber=$_GET['product'.$i]; 
 if ($itemnumber!='') 
 { 
-$productnumber=$i; 
+$itemnumber=$i; 
 break; 
 } 
 } else { 
