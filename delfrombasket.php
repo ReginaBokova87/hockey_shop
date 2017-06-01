@@ -1,12 +1,18 @@
 <?php session_start();
+$itemnumber='';
 for ($i=0; $i<$_SESSION['basketcounter']; $i++)
 {
-	$itemnumber=$_GET['item'.$i];
-	if ($itemnumber!='')
-	{
-		$itemnumber=$i;
-		break;
-	}
+	{ 
+if(!empty($_GET['product'.$i])){ 
+	$itemnumber=$_GET['product'.$i]; 
+if ($itemnumber!='') 
+{ 
+$productnumber=$i; 
+break; 
+} 
+} else { 
+continue; 
+} 
 }
 for ($i=$itemnumber; $i<$_SESSION['basketcounter']; $i++)
 {
