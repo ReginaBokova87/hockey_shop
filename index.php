@@ -64,6 +64,7 @@ if (isset($_SESSION['basketcounter'])==false)
 		$is_item_added = true;
 		echo '<form action="addtobasket.php">
 		';
+		if ($is_item_added==true){
 		for ($j=0; $j<$_SESSION['basketcounter']; $j++)
 		{
 			if ($_SESSION['item'.$j]==$productarticles[$i])
@@ -74,8 +75,8 @@ if (isset($_SESSION['basketcounter'])==false)
 				$is_item_added=false;
 			}
 		}
-			
-			if ($is_item_added==false)
+		}	
+		else	if ($is_item_added==false)
 			{
 				echo '
 				<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
