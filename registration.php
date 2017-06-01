@@ -72,11 +72,11 @@ if ($mysqli->connect_errno) {
 	
 
 		<div>
-        <a href="index.html"><img src="shapka.jpg" width="100%"></a>
+        <a href="index.html"><img src="images/shapka.jpg" width="100%"></a>
         </div>
        <div id="daynews">
 		<?		
-				$daynews=file('daynews.txt', FILE_IGNORE_NEW_LINES);
+				$daynews=file('files/daynews.txt', FILE_IGNORE_NEW_LINES);
 				for ($i=0; $i<count($daynews); $i++)
 						{
 							echo $daynews[$i];
