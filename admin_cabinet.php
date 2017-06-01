@@ -40,7 +40,7 @@ if ($mysqli->connect_errno) {
 if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
 					{
 					$id = $_SESSION['USER']['ID'];
-				 $query = "SELECT * FROM users WHERE `id` = ' . $mysqli->real_escape_string($id). ' ";
+				 $query = "SELECT * FROM users WHERE `id` = '$id' ";
 				 $result = $mysqli->query($query);
     while($user=$result->fetch_assoc()){
         if(isset($user['id'])){
