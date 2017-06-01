@@ -51,10 +51,7 @@ if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode']))
         }
     }	
 				echo '<div id="basket" style="font-size:18px;color:#464451;padding-left:20px" align="left">
-				<p><b>Мой логин: ',$login,'</b></p>
-				<p><b>ФИО: ',$FIO,'</b></p>
-				<p><b>Мой E-mail: ',$email,'</b></p>
-				<p><b>Город: ',$city,'</b></p>';
+				<p><b>Мой логин: ',$login,'</b></p>';
 				$orderscount=file('files/ordersitems.txt', FILE_IGNORE_NEW_LINES);
 		echo '<a href="new_orders.php" style="float:left;">  Новые заказы: ', count($orderscount), '</a><br>
 				';
