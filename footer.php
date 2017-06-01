@@ -1,22 +1,23 @@
 <div id="footer">
 			<?php
 if(empty($_COOKIE['session_key'])){
-		$text = "Какой-то текст";
-		$fp = fopen("files/file.txt", "w");
-		fwrite($fp, $text);
-		fclose($fp);
-	
-	$count2 = file_get_contents('files/counter2.txt');
+	$count2 = file_get_contents("counter2.txt");
 	$count2++;
 	setcookie('session_key', $count2);
-	file_put_contents('files/counter2.txt',$count2);
+	
+	$fp = @fopen("counter2.txt", "w");
+	fwrite($fp, $count2);
+	fclose($fp);
 	}	
 	echo '<p><b>Число посетителей: '.$_COOKIE['session_key'].'</b></p>';
-
-		$handle = file_get_contents('files/counter.txt');
+?></span>
+                        <span><?php
+		$handle = file_get_contents("counter.txt");
 		$handle++;
-		file_put_contents('files/counter.txt',$handle);
-		echo '<p><b> Число посещений: ',$handle,'</b></p>';
+		$fp = @fopen("counter.txt","w");
+		fwrite($fp,$handle);
+		fclose($fp);
+		echo "<p><b>Число посещений: $handle</b></p>";
 	?>
 	
 	
