@@ -105,22 +105,35 @@ if ($mysqli->connect_errno) {
         </div>
         <div id="page">
             <div id="content">
+				<h2 class="post_ttl">Каталог товаров</h2>
 				<div id="catalog">
-					<h2 class="post_ttl">Каталог товаров</h2>
+					<div id="banner">
 					<?php
-						$productnames=file('top_productnames.txt', FILE_IGNORE_NEW_LINES);
-						$productimgs=file('top_productimgs.txt', FILE_IGNORE_NEW_LINES);
-						$productprices=file('top_productprices.txt', FILE_IGNORE_NEW_LINES);
-						$productsrcs=file('top_productsrcs.txt', FILE_IGNORE_NEW_LINES);
-						for ($i=0; $i<count($productnames); $i++)
+					$bannernames=file('files/bannernames.txt', FILE_IGNORE_NEW_LINES);
+					$bannerimgs=file('files/bannerimgs.txt', FILE_IGNORE_NEW_LINES);
+					$bannersrcs=file('files/bannersrcs.txt', FILE_IGNORE_NEW_LINES);
+						for ($i=0; $i<count($bannernames); $i++)
+						{
+							echo '<a href="',$bannersrcs[$i],'" > <img src="banner/',$bannerimgs[$i],'" alt="',$bannernames[$i],'"></a>';
+						}
+					?>
+					</div>
+					<?php
+						$productarticles=file('files/top_productarticles.txt', FILE_IGNORE_NEW_LINES);
+						$productnames=file('files/top_productnames.txt', FILE_IGNORE_NEW_LINES);
+						$productimgs=file('files/top_productimgs.txt', FILE_IGNORE_NEW_LINES);
+						$productprices=file('files/top_productprices.txt', FILE_IGNORE_NEW_LINES);
+						$productsrcs=file('files/top_productsrcs.txt', FILE_IGNORE_NEW_LINES);
+						for ($i=0; $i<count($productarticles); $i++)
 						{
 							echo '
 								<div id="product">
-						<a href="',$productsrcs[$i],'" title="',$productnames[$i],'"> <img src="top/',$productimgs[$i],'"></a>
+						<a href="',$productsrcs[$i],'"> <img src="top/',$productimgs[$i],'" alt="',$productnames[$i],'"></a>
 						<br>
-						<a href="',$productsrcs[$i],'" align="middle">',$productnames[$i],'</a>
+						<a href="',$productsrcs[$i],'" target="_blank" align="middle">',$productnames[$i],'</a>
 						<br>
-						<p align="center">',$productprices[$i],'руб.</p>';
+						<p align="center">',$productprices[$i],'руб.</p>
+						<p align="center">Артикул: ',$productarticles[$i],'</p>';
 					
 			
 						if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode']))
@@ -131,24 +144,28 @@ if ($mysqli->connect_errno) {
 	}
 	else
 	{
+		
 		echo '<form action="addtobasket.php">
 		';
+		
+		$is_item_added[$i]=false;
 		for ($j=0; $j<$_SESSION['basketcounter']; $j++)
 		{
-			if ($_SESSION['item'.$j]==$productnames[$i])
+			if ($_SESSION['item'.$j]==$productarticles[$i])
 			{
 				echo '
 				<center><input type="submit" value="Добавлено в корзину" name="product', $i, '" disabled></center>
 				';
-				$is_item_added[$i]=1;
+				$is_item_added[$i]=true;
 			}
 		}
-		if ($is_item_added[$i]!=1)
-		{
-			echo '
-			<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
-			';
-		}
+		if ($is_item_added[$i]==false)
+			{
+				echo '
+				<center><input type="submit" value="Добавить в корзину" name="product', $i, '"></center>
+				';
+			}
+		
 		echo '</form>';
 					};echo'</div>';}	
 					
@@ -160,6 +177,8 @@ if ($mysqli->connect_errno) {
 	<h2 class="post_ttl">Добавление товаров</h2>
 	<form method="post" enctype="multipart/form-data" action=addproduct.php>
 	
+	<p>Артикул:<br>
+	<input type="text" size="40" name="productarticle" required></p>
 	<p>Название:<br>
 	<input type="text" size="40" name="productname" required></p>
 	<p>Цена:<br>
@@ -167,12 +186,11 @@ if ($mysqli->connect_errno) {
 	<p>Картинка (рекоменд. размер - 200x200px):<br>
 	<input type="file" name="productimg" required></p>
 	<p>Ссылка на товар(если есть):<br>
-	<input type="text" size="40" name="productsrc" required></p>
+	<input type="text" size="40" name="productsrc"></p>
 	<input type="submit" value="Добавить товар">
 	</form>
 	</div>';
 }			
-				
 				?>
 				</div>
             </div>
@@ -180,7 +198,6 @@ if ($mysqli->connect_errno) {
 <? require 'footer.php';?>
 </div>
 </body>
-
 </html>
 			
 		
