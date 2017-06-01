@@ -1,7 +1,7 @@
 <?session_start();
 if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) 
 {
-$productnames=file('files/top_productarticles.txt', FILE_IGNORE_NEW_LINES);
+$productarticles=file('files/top_productarticles.txt', FILE_IGNORE_NEW_LINES);
 $productnames=file('files/top_productnames.txt', FILE_IGNORE_NEW_LINES);
 $productprices=file('files/top_productprices.txt', FILE_IGNORE_NEW_LINES);
 $productimgs=file('files/top_productimgs.txt', FILE_IGNORE_NEW_LINES);
