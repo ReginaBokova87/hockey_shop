@@ -1,5 +1,4 @@
 <div id="reg">
-		<?php header("Content-Type: text/html; charset=utf-8");?>
 		<?if(!empty($_GET['auth'])){
                 session_destroy();
 				header('Location:index.php');
