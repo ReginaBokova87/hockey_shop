@@ -9,7 +9,7 @@ if (isset($_SESSION['USER']['LOGIN']) && isset($_SESSION['adminmode'])) {
         file_put_contents('files/ordersitems.txt', '<tr><td>' . $_SESSION['item' . $i] . '</td><td>' . $_SESSION['item_name' . $i] . '</td><td>' . $_SESSION['quantity' . $i] . '</td><td>' . $_SESSION['price' . $i] * $_SESSION['quantity' . $i] . ' руб.</td></tr><br>', FILE_APPEND);
     }
     file_put_contents('files/ordersitems.txt', '<tr><td style="background:#e6e6fa;"><b>Итого к оплате: </b></td><td style="background:#e6e6fa; text-align: right; padding-right:40px;" colspan="4"><b>' . $sum . ' руб.</b></td></tr>' . "\n", FILE_APPEND);
-    $login       = $_SESSION['USER']['LOGIN'];
+    $login       = htmlspecialchars($_SESSION['USER']['LOGIN']);
     $fullname    = htmlspecialchars($_GET['fullname']);
     $phonenumber = htmlspecialchars($_GET['phonenumber']);
     $email       = htmlspecialchars($_GET['email']);
