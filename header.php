@@ -4,7 +4,7 @@
       header('Location:index.php');
       }?>
    <? if(isset($_SESSION['USER'])):?>
-   <p>Здравствуйте, <?=$_SESSION['USER']['LOGIN']?> | <?if ($_SESSION['USER']['LOGIN']=='Regina')
+   <p>Здравствуйте, <?=htmlspecialchars($_SESSION['USER']['LOGIN'])?> | <?if (htmlspecialchars($_SESSION['USER']['LOGIN'])=='Regina')
       {
       	$_SESSION['adminmode']='activated';
       	echo ' Должность: администратор | <a href="admin_cabinet.php">Кабинет администратора | <a href="index.php?auth=exit">Выйти</a>';
