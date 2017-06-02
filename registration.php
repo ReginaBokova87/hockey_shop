@@ -36,7 +36,7 @@
                    $email = $mysqli->real_escape_string($_POST['email']);
                    $city = $mysqli->real_escape_string($_POST['city']);
                    $registration = true;
-                   $query = "SELECT * FROM users WHERE `login` = '.$login.'";
+                   $query = "SELECT * FROM users WHERE `login` = '$login'";
                 $result = $mysqli->query($query);
                   while($user=$result->fetch_assoc()){
                       if(isset($user['id'])){
@@ -45,7 +45,7 @@
                   }
                   if($registration !== false){
                	
-                      $query  = "INSERT INTO users (`login`, `password`, `FIO`, `email`, `city`) VALUES ('.$login.', '.$password.', '.$FIO.', '.$email.', '.$city.')";
+                      $query  = "INSERT INTO users (`login`, `password`, `FIO`, `email`, `city`) VALUES ('$login', '$password', '$FIO', '$email', '$city')";
                	$result = $mysqli->query($query);
                       if($result) {
                           echo "Вы зарегистрированны как $login";
