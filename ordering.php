@@ -48,7 +48,7 @@
                         <input type="text" size="30" name="fullname" required placeholder="Ф.И.О."><br><br>
                         <input type="text" size="30" name="phonenumber" required placeholder="Номер телефона"><br><br>
                         <input type="text" size="30" name="email" required placeholder="E-mail"><br><br>
-                        <input type="text" size="85" name="adress" placeholder="Адрес доставки (оставьте поле пустым, если желаете забрать товар самостоятельно):"><br><br>
+                        <input type="text" size="85" name="address" placeholder="Адрес доставки (оставьте поле пустым, если желаете забрать товар самостоятельно):"><br><br>
                         <input type="text" size="50" name="date" required placeholder="Желаемая дата доставки (самовывоза) товара:"><br>
                         </td>
                         </tr>
