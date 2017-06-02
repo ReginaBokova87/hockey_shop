@@ -13,7 +13,7 @@ a:hover
 body
 {
 	background: url('images/fon.jpg');
-	background-repeat: repeat fixed top-y;
+	background-attachment:fixed;
 	margin: 0px auto 0px;
 }
 h1, h2, h3, h4, h5, h6
