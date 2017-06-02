@@ -43,7 +43,7 @@
                          $result = $mysqli->query($query);
                          while ($user = $result->fetch_assoc()) {
                              if (isset($user['id'])) {
-                                 $login = $user['login'];
+                                 htmlspecialchars($login) = $user['login'];
                                  $FIO   = $user['FIO'];
                                  $email = $user['email'];
                                  $city  = $user['city'];
