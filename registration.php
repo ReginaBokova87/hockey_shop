@@ -48,7 +48,7 @@
                       $query  = "INSERT INTO users (`login`, `password`, `FIO`, `email`, `city`) VALUES ('$login', '$password', '$FIO', '$email', '$city')";
                	$result = $mysqli->query($query);
                       if($result) {
-                          echo "Вы зарегистрированны как $login";
+                          echo "Вы зарегистрированны как " . htmlspecialchars($login);
                           echo '<a href="index.php"> | Авторизация</a>';
                       }
                   } else {
