@@ -41,7 +41,7 @@
                         echo ' <table style="margin-top:50px;"  id="gradient"><tr><th><h2 class="gradient">Заказ №',$i+1,'</h2></th></tr>
                         <tr><th><h2 class="post_ttl" style="margin-bottom:0px;border-radius:0px;">Данные о заказчике</h2></th></tr>
                         <tr><td><table><tr><th>Наименование</th><th>Значение</th></tr>
-                        <tr><td>Логин</td><td>', $logins[$i], '</td></tr>
+                        <tr><td>Логин</td><td>', htmlspecialchars($logins[$i]), '</td></tr>
                         <tr><td>Дата оформления заказа</td><td>', $orderingdates[$i], '</td></tr>
                         <tr><td>Ф.И.О.</td><td>', $fullnames[$i], '</td></tr>
                         <tr><td>Тел. номер</td><td>', $phonenumbers[$i], '</td></tr>
